@@ -1,10 +1,9 @@
 
-
 class block:
 
-  def __init__(self, x, y, w, v, m):
+  def __init__(self, x, y, w, v, m, h):
     self.x = x
-    self.y = y
+    self.y = h - y
     self.v = v
     self.w = w
     self.m = m
