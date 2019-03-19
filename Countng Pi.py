@@ -5,7 +5,7 @@ py.mixer.init()
 
 digits = int(input('Number of digits : '))
 timestep = 10000
-click = py.mixer.Sound('click.wav')
+clack = py.mixer.Sound('clack.ogg')
 
 screen = py.display.set_mode((800,400))
 
@@ -36,12 +36,12 @@ while True:
   for i in range(timestep):
 
     if block1.collision(block2):
-      click.play()
+      clack.play()
       block1.v, block2.v = block1.elastic_collision(block2), block2.elastic_collision(block1)
       count += 1
 
     if block1.wall_collision():
-      click.play()
+      clack.play()
       block1.v *= -1
       count += 1
 
